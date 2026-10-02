@@ -6,7 +6,7 @@ Aplicação de cadastro de produtos construída com o padrão arquitetural **MVC
 
 ## Integrante
 
-Lucas Rodrigues — RM: _____ <!-- preencher -->
+Lucas Rodrigues — RM: 20240308
 
 ## Como executar
 
