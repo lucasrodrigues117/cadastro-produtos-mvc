@@ -5,34 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= typeof titulo !== 'undefined' ? titulo + ' · Cadastro de Produtos' : 'Cadastro de Produtos' %></title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
-          colors: {
-            brand: {
-              50: '#f5f3ff', 100: '#ede9fe', 200: '#ddd6fe', 300: '#c4b5fd',
-              400: '#a78bfa', 500: '#8b5cf6', 600: '#7c3aed', 700: '#6d28d9',
-              800: '#5b21b6', 900: '#4c1d95'
-            }
-          }
-        }
-      }
-    }
-  </script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; }
+    body { font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif; }
+    .btn-press:active { transform: scale(0.98); }
   </style>
 </head>
 <body class="min-h-screen bg-slate-50 text-slate-800">
   <nav class="bg-white border-b border-slate-200 sticky top-0 z-10">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="/" class="flex items-center gap-2 font-extrabold text-lg text-slate-900">
-        <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-600 text-white shadow-sm">📦</span>
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-amber-700 text-white shadow-sm">
+          <i class="ph-fill ph-package text-lg"></i>
+        </span>
         Cadastro de Produtos
       </a>
       <div class="flex items-center gap-1 text-sm font-medium">

@@ -1,10 +1,10 @@
 <%- include('partials/header') %>
 
 <div class="max-w-xl mx-auto text-center py-10">
-  <p class="text-6xl mb-4">⚠️</p>
-  <h1 class="text-3xl font-extrabold text-slate-900"><%= error.status || 500 %></h1>
+  <i class="ph-light ph-warning-circle text-6xl text-amber-700"></i>
+  <h1 class="mt-4 text-3xl font-extrabold text-slate-900"><%= error.status || 500 %></h1>
   <p class="mt-2 text-slate-500"><%= message %></p>
-  <a href="/" class="mt-6 inline-flex rounded-xl bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 transition">
+  <a href="/" class="btn-press mt-6 inline-flex rounded-xl bg-amber-700 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-amber-800 transition">
     Voltar ao início
   </a>
   <% if (error && error.stack) { %>

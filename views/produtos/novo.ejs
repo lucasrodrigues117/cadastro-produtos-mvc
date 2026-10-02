@@ -1,7 +1,9 @@
 <%- include('../partials/header') %>
 
 <div class="max-w-xl mx-auto">
-  <a href="/produtos" class="text-sm font-semibold text-slate-500 hover:text-slate-700">← Voltar para produtos</a>
+  <a href="/produtos" class="inline-flex items-center gap-1 text-sm font-semibold text-slate-500 hover:text-slate-700">
+    <i class="ph-bold ph-arrow-left"></i> Voltar para produtos
+  </a>
 
   <h1 class="mt-4 text-3xl font-extrabold text-slate-900">Novo produto</h1>
   <p class="mt-1 text-slate-500 mb-8">Preencha os dados abaixo para cadastrar um produto.</p>
@@ -14,7 +16,7 @@
         name="nome"
         required
         placeholder="Ex: Teclado mecânico"
-        class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500"
+        class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500"
       >
     </div>
 
@@ -23,21 +25,21 @@
         <label class="block text-sm font-semibold text-slate-700 mb-1.5">Preço (R$)</label>
         <input
           type="number" name="preco" step="0.01" min="0" required placeholder="0,00"
-          class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500"
+          class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500"
         >
       </div>
       <div>
         <label class="block text-sm font-semibold text-slate-700 mb-1.5">Quantidade</label>
         <input
           type="number" name="quantidade" min="0" value="0"
-          class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500"
+          class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500"
         >
       </div>
     </div>
 
     <div>
       <label class="block text-sm font-semibold text-slate-700 mb-1.5">Categoria</label>
-      <select name="categoriaId" class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+      <select name="categoriaId" class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500">
         <option value="">Sem categoria</option>
         <% categorias.forEach(c => { %>
           <option value="<%= c.id %>"><%= c.nome %></option>
@@ -45,13 +47,13 @@
       </select>
       <% if (categorias.length === 0) { %>
         <p class="mt-1.5 text-xs text-slate-400">
-          Nenhuma categoria cadastrada. <a href="/categorias/novo" class="text-brand-600 font-semibold">Criar uma →</a>
+          Nenhuma categoria cadastrada. <a href="/categorias/novo" class="text-amber-700 font-semibold">Criar uma →</a>
         </p>
       <% } %>
     </div>
 
     <div class="flex items-center gap-3 pt-2">
-      <button type="submit" class="rounded-xl bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 transition">
+      <button type="submit" class="btn-press rounded-xl bg-amber-700 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-amber-800 transition">
         Salvar produto
       </button>
       <a href="/produtos" class="rounded-xl px-5 py-2.5 text-sm font-semibold text-slate-500 hover:bg-slate-100 transition">

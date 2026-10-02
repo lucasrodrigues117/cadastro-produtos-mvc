@@ -1,7 +1,9 @@
 <%- include('../partials/header') %>
 
 <div class="max-w-xl mx-auto">
-  <a href="/categorias" class="text-sm font-semibold text-slate-500 hover:text-slate-700">← Voltar para categorias</a>
+  <a href="/categorias" class="inline-flex items-center gap-1 text-sm font-semibold text-slate-500 hover:text-slate-700">
+    <i class="ph-bold ph-arrow-left"></i> Voltar para categorias
+  </a>
 
   <h1 class="mt-4 text-3xl font-extrabold text-slate-900">Nova categoria</h1>
   <p class="mt-1 text-slate-500 mb-8">Crie uma categoria para organizar seus produtos.</p>
@@ -11,12 +13,12 @@
       <label class="block text-sm font-semibold text-slate-700 mb-1.5">Nome</label>
       <input
         type="text" name="nome" required placeholder="Ex: Informática"
-        class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500"
+        class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500"
       >
     </div>
 
     <div class="flex items-center gap-3 pt-2">
-      <button type="submit" class="rounded-xl bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 transition">
+      <button type="submit" class="btn-press rounded-xl bg-amber-700 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-amber-800 transition">
         Salvar categoria
       </button>
       <a href="/categorias" class="rounded-xl px-5 py-2.5 text-sm font-semibold text-slate-500 hover:bg-slate-100 transition">
