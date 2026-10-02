@@ -1,0 +1,15 @@
+<% if (typeof status !== 'undefined' && status) {
+  const mensagens = {
+    criado: 'Criado com sucesso.',
+    atualizado: 'Atualizado com sucesso.',
+    excluido: 'Excluído com sucesso.'
+  };
+  const texto = mensagens[status];
+%>
+  <% if (texto) { %>
+    <div class="mb-6 flex items-center gap-2 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-medium text-emerald-700">
+      <span>✅</span>
+      <span><%= texto %></span>
+    </div>
+  <% } %>
+<% } %>

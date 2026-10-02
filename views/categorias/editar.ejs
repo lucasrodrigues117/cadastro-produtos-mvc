@@ -1,0 +1,29 @@
+<%- include('../partials/header') %>
+
+<div class="max-w-xl mx-auto">
+  <a href="/categorias" class="text-sm font-semibold text-slate-500 hover:text-slate-700">← Voltar para categorias</a>
+
+  <h1 class="mt-4 text-3xl font-extrabold text-slate-900">Editar categoria</h1>
+  <p class="mt-1 text-slate-500 mb-8">Atualize o nome de <strong><%= categoria.nome %></strong>.</p>
+
+  <form action="/categorias/<%= categoria.id %>" method="POST" class="rounded-2xl bg-white border border-slate-200 shadow-sm p-6 space-y-5">
+    <div>
+      <label class="block text-sm font-semibold text-slate-700 mb-1.5">Nome</label>
+      <input
+        type="text" name="nome" required value="<%= categoria.nome %>"
+        class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500"
+      >
+    </div>
+
+    <div class="flex items-center gap-3 pt-2">
+      <button type="submit" class="rounded-xl bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 transition">
+        Atualizar categoria
+      </button>
+      <a href="/categorias" class="rounded-xl px-5 py-2.5 text-sm font-semibold text-slate-500 hover:bg-slate-100 transition">
+        Cancelar
+      </a>
+    </div>
+  </form>
+</div>
+
+<%- include('../partials/footer') %>
