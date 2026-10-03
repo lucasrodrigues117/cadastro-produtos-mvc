@@ -37,6 +37,7 @@ O banco de dados SQLite (`database.sqlite`) é criado automaticamente na primeir
 - **Controller**: funções dentro das rotas (`routes/produtos.js`, `routes/categorias.js`, `routes/index.js`) que recebem as requisições, acionam os Models e escolhem a View a ser renderizada.
 
 ## Desafios
+Todos Feitos
 
 **Desafio 1 — Categorias e relacionamento com produtos**
 Foi criado o Model `Categoria` (`id`, `nome`) e estabelecido um relacionamento `1:N` com `Produto` através da chave estrangeira `categoriaId` (`Categoria.hasMany(Produto)` / `Produto.belongsTo(Categoria)`). O formulário de produto passou a ter um campo de seleção de categoria, e a exclusão de uma categoria não apaga os produtos vinculados (`onDelete: 'SET NULL'`).
